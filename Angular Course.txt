@@ -42,4 +42,17 @@ Angular History
 
 - October 2010 - AngularJS 1.0
 - October 2016 - Angular 2 (Angular 2 was a complete rewrite of AngularJS. Hence AngularJS and Angular 2 are two different frameworks and two different code bases.
-- 
+- Angular 2 and higher follow the same framework approach (incremental improvements)
+- March 2017 - Angular 4 
+- Novemeber 2017 - Angular 5 
+- May 2018 - Angular 6
+- October 2018 - Angular 7
+- May 2019 - Angular 8   
+- November 2017 - Angular 9 
+- May 2020 - Angular 10
+- October 2020 - Angular 11
+- May 2021 - Angular 12
+- October 2021 - Angular 13
+- May 2022 - Angular 14
+- October 2022 - Angular 15
+- May 2023 - Angular 16 
