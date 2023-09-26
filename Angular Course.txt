@@ -1,0 +1,45 @@
+Angular Course 
+-------------------
+
+- Angular is a framework for building modern single-page applications.
+
+- Official Documentations - www.angular.io
+
+
+How is a single page Application different from traditional Application:
+
+Traditional Applications : 
+
+- Each user Action results in a full HTML page load.
+- If we do any action in the browser then a request goes to the server and it returns the full page everytime and refresh of the page happens.
+
+Single Page Application:
+
+- A web Application that is composed of a single page.
+- Based on user actions, the application page is update.
+- Normally performs a partial update instead of a full page load.
+
+Examples of Single- Page Applications:
+
+- Google Maps
+- Gmail-Emails
+
+Angular Solution 
+
+- Angular is a framework for building modern single-page applications.
+
+Who,s Using Angular?
+
+- Companies around the world are using Angular : 
+
+- Australian Government Immigration
+- Citi Bank Customer Service
+- Microsoft Xbox
+
+- Website - www.madewithangular.com
+
+Angular History
+
+- October 2010 - AngularJS 1.0
+- October 2016 - Angular 2 (Angular 2 was a complete rewrite of AngularJS. Hence AngularJS and Angular 2 are two different frameworks and two different code bases.
+- 
