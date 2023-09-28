@@ -56,3 +56,98 @@ Angular History
 - May 2022 - Angular 14
 - October 2022 - Angular 15
 - May 2023 - Angular 16 
+
+What is TypeScript?
+
+- Language developed by Microsoft in 2012.
+- Free and Open-Source
+- Provides static typing support to JavaScipt.
+- Helps with IDE Sipport : Code completion and debugging.
+- Add support for object-oriented programming.
+- Classes, Objects, Inheritance and interfaces etc.
+- Official website : www.typesciptlang.org
+
+React Development 
+
+- For React development, we can develop using various languages:
+
+- JavaScipt: extemely popular programming language.
+- ECMAScript: standardized version of JavaScipt(ES6,ES9...)
+- TypeScript: adds optional types to JavaScipt.
+- Other Languages such as Dart etc.
+
+TypeScript is the most popular language for React development.
+
+
+Why do most React developers use TypeScript?
+
+- Strongly-Types Language with compile time cheching and IDE Support.
+
+- Increased developer productivity and efficiency.
+
+
+Development Process:
+
+- Create TypeScript code
+- Compile the code
+- Run the code
+
+
+Step 1 : Create the TypeScript code
+
+- TypeScript files have .ts extension
+
+Step 2 : Compile the code 
+
+- Web browsers do not understand TypeScript natively.
+
+- Have to convert TypeScript code to JavaScript Code.
+
+- This is known as "transpiling"
+
+- "Transpiling" is accomplished with tsc command 
+
+eg:
+>>tsc mydemo.ts
+
+Step 3: Run the code
+
+- To run the JavaScript code, we use the node command.
+- Run the generated JavaScript code (.js file)
+
+>> node mydemo.js
+
+- The compiler/ IDE can find errors earlier at compile time.
+
+- JS generates errors only at runtime.
+- Hence Compile time errors are way better.
+
+
+
+TypeScript Data Types:
+
+1) boolean : true/false
+2) number : integer or floating point numbers
+3) string : text data. Enclosing in single or double quotes.
+4) any : Supports any datatype assignment
+5) Others 
+
+
+Define a Variable 
+
+Syntax : let <variableName>: <type> = <initial value>;
+
+example : let found : boolean = true;
+
+TypeScript "let" keyword
+
+- We are using the new TypeScript let keyword for variable declarations
+- As opposed to using traditional JavaScipt var keyword.
+- The JavaScript var keyword had a number of gotchas and pitfalls.
+- Like Scoping , capturing, Shadowing etc.
+- The new Typescript let keyword helps to eliminate those issues.
+- TypeScript is strongly Typed.
+
+For long concatinations : use backticks : 
+eg:
+console.log(`Hi${firstname}{lastname}`);
