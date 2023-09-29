@@ -151,3 +151,150 @@ TypeScript "let" keyword
 For long concatinations : use backticks : 
 eg:
 console.log(`Hi${firstname}{lastname}`);
+
+Growable Arrays
+----------------
+
+example :
+
+let sports : string[] = ['Golf', "Cricket"];
+
+sports.push('Baseball');
+sports.push('hockey');
+
+for(let sport of sports)
+{
+console.log(sport);
+}
+
+Creating Classes in TypeScript:
+
+- Customer Class
+
+	firstName : string
+	lastName : string
+	
+	constructors
+	getter/setter methods.
+	
+Basic Structure:
+
+class Customer {
+	//properties
+	//constructors
+	//getter/setter methods
+}
+
+File name can be any name.
+
+Properties of Class:
+
+class Customer {
+//properties
+firstName : string ; // Properties are public by default.
+lastName : string;
+}
+
+Construct an Instance 
+
+class Customer {
+	//properties
+	firstName : string;
+	lastName : string;
+}
+
+let myCustomer = new Customer ();
+
+myCustomer.firstName = "Martin";
+myCustomer.lastName = "Dixon";
+
+console.log(myCustomer.firstName);
+console.log(myCustomer.lastName);
+
+Create a Constructor
+
+class Customer{
+	firstName : string;
+	lastName : string ; 
+	constructor(theFirst:string,thelast:string)// Use constructor keyword
+	{
+		this.firstName = thefirst;
+		this.lastName = thelast;
+	}
+}
+
+
+Access Modifiers:
+
+- public - Property is accessible to all classes (default modifier).
+- protected - Property is only accessible in current class and subclass.
+- private - Property is only accessible in current class.
+
+
+
+Note : if we have errors in the code , then to tcs command generates .js file and .js file runs.
+- to Prevent this we have a command to stop generating .js files if their is a compilation error.
+- tsc --noEmitOnError Customer.ts
+- So the flag --noEmitOnError say to not generate a .js file when their is an exsisting compilation error.
+
+
+Getter/ Setter Methods
+-----------------------
+
+class Customer {
+	private firstName : string;
+	private lastName : string;
+	
+	public getFirstName() : string
+	{
+		return this.firstName;
+	}
+	
+	public setFirstName(theFirst: string) : void
+	{
+		this.firstName = theFirst;
+	}
+}
+
+let myCustomer = new Customer("Martin","Dixon");
+
+myCustomer.setFirstName("Greg");
+console.log(myCustomer.getFirstName());
+
+
+TypeScript: Accessors - Get/Set
+
+- TypeScript also offers an alternate syntax.
+- Define special : get/set methods
+- known as Accessors.
+
+Syntax:
+
+- Can give any property name some developers use leading "_".
+- Nothing special about "_" No special magic Just a convention.
+- Syntax:
+
+	get <space> property ()
+	it has no return type.
+	set <space> property ()
+	it has no return type.
+	
+Example :
+
+class Customer {
+	private _firstName: string;
+	private _lastName : string;
+	
+	public get firstName()
+	{
+		return this.firstName;
+	}
+	public set firstName(value:string)
+	{
+		this.firstName = value;
+	}
+}
+
+let myCustomer = new Customer("Matin","Dixon");
+
+myCustomer.firstName = "Susan"; //Calls the "set" accessor since we are assigning a value;
