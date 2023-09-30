@@ -329,3 +329,18 @@ file : tsconfig.json
 		"target":"es5"
 	}
 }
+
+- You can also generate a template for this file.
+
+>> tsc --init
+
+- Then edit the tsconfig.json accordingly for your project requirements.
+
+Compiling your Project
+----------------------
+
+- Once your project has a tsconfig.json , then you can compile with :
+
+>> tsc 
+
+- No need to give names of TypeScript files. By default , will compile all *.ts files.
