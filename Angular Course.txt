@@ -298,3 +298,34 @@ class Customer {
 let myCustomer = new Customer("Matin","Dixon");
 
 myCustomer.firstName = "Susan"; //Calls the "set" accessor since we are assigning a value;
+
+// if we dont add public, getter/setter methods will be public by default.
+
+//Variable names and getter / setter method names can be different.
+
+Compiler Flag
+
+- The get/set accessors feature is only supported in ES5 and higher.
+- You have to set a compiler flag in order to compile te code.
+
+>> tsc --target ES5 --noEmitOnError Customer.ts
+
+Problem with too many compiler flag:
+
+- You may have noticed , that we have a lot of compiler flags
+- TypeScript has a solution : tsconfig.json file.
+
+tsconfig.json
+----------------
+
+- tsconfig.json file defines compiler options and project settings.
+- Place this file in root of your project directory.
+
+file : tsconfig.json
+
+{
+	"compilerOptions":{
+		"noEmitOnError":true,
+		"target":"es5"
+	}
+}
