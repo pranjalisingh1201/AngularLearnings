@@ -344,3 +344,80 @@ Compiling your Project
 >> tsc 
 
 - No need to give names of TypeScript files. By default , will compile all *.ts files.
+
+
+Constructor Parameter Properties
+
+class Customer
+{
+	constructor (private _firstName:string,
+	private _lastName:string)//Defines properties and assigns automatically. Minimizes boiler plate coding.
+	
+}
+
+Modules
+-----------
+
+Code Organization
+-----------------
+
+- Currently all of our code is in a single file.
+- For real-time projects , we would like to place in separate files.
+
+For example : there is a driver.ts file and we want ot use other ts files is Customer.ts , Products.ts etc
+
+- To perform this task we will we use import.
+
+- TypeScript supports the concepts of modules.
+- A module can export classes , functions , variables etc.
+- Another file can import classes , functions , variables etc from module.
+
+Module Example 
+-----------------
+
+import {Customer} from './Customer';//Can give relative direcotry path,Based on file name (leave off .ts).
+
+let myCustomer = new Customer("Martin","Dixon");
+
+console.log(myCustomer.firstname);
+console.log(myCustomer.lastName);
+
+
+To import , first we have to export :
+
+- So we use export keyword before class Customer.
+
+Inheritance
+------------------
+
+- TypeScript supports the object-oriented concept of inheritance.
+- Define common properties and methods in the superclass.
+- Subclass can extend superclasses and add properties and methods.
+- Support for abstact classes and overriding.
+- TypeScript only supports single inheritance.
+- However  you can implement multiple interfaces.
+
+Inheritance Example
+------------------------
+
+					Shape
+					----------
+					x:number
+					y:number
+					
+					get/set
+					getInfo():string
+					
+						|			|
+					extends			extends
+						|			|
+					Circle 		Rectangle
+				-----------	 	-----------
+		radius:number 			width:number
+								length:number
+								
+		get/set					get/set
+		getInfo():string		getInfo():string
+		
+		
+		
