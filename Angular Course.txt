@@ -420,4 +420,136 @@ Inheritance Example
 		getInfo():string		getInfo():string
 		
 		
+Abstract Classes 
+-------------------
+
+- An abstract class represents a general concept.
+- For example : Shape, Vahical, Computer etc.
+- Can't create an instance of an abstract class.
+- Abstract class can also have abstract methods.
+- Abstact Methods must be implemented by concrete subclasses.
 		
+
+					Shape - Abstract class
+					----------
+					x:number
+					y:number
+					
+					get/set
+					getInfo():string
+					calculateArea():number - Abstarct method.
+					Every Shape subclass must implement calculateArea().
+					
+						|			|
+					extends			extends
+						|			|
+					Circle 		Rectangle
+				-----------	 	-----------
+		radius:number 			width:number
+								length:number
+								
+		get/set					get/set
+		getInfo():string		getInfo():string
+		calculateArea():number  calculateArea():number
+		AreaofCircle - pi*r^2   AreaofRectangle - width*length
+
+
+Abstract class Example:
+----------------------------
+
+
+Shape.ts
+-----------
+
+export abstract class Shape {//abstarct class with abstarct keyword.
+	abstract calculateArae(): number; //abstarct method with abstarct keyword.
+}		
+
+Rectangle.ts
+-------------
+
+import {Shape} from './Shape';
+
+export class Rectangle extends Shape{
+
+calculateArea(): number{ // Override the calculateArea() method
+	return this._width*this._length;
+}
+}
+
+
+Circle.ts
+-----------
+
+import {Shape} from './Shape';
+
+export class Circle extends Shape {
+	calculateArea():number{
+		return Math.PI*Math.pow(this._radius,2);
+	}
+}
+
+Creating an Instance 
+-------------------------
+
+let myShape = new Shape(10,15);
+console.log(myShape.getInfo());
+
+- This will not compile since Shape is an abstact class.
+- Can't create instance of abstarct class directly.
+- Only Concrete subclasses : Circle Rectangle.
+
+Creating an Array of Shapes
+-------------------------------
+
+let myCircle = new Circle(5,10,20);
+let myRectangle = new Rectangle(0,0,3,7);
+
+let theShapes: Shape[] = [];
+theShapes.push(myCircle);
+theShapes.push(myRectangle);
+
+for (let temp of theShapes)
+{
+	console.log(temp.getInfo());
+	console.log("Area="+temp.calculateArea());
+	console.log();
+} 
+
+TypeScript Interfaces
+---------------------------
+
+TypeScript supports interfaces
+- Define an interface with a method contract.
+- Classes implement the iterface accordingly.
+- A class can implement multiple interfaces.
+- TypeScript can also use interfaces to support contracts with properties.
+
+
+Angular Features
+----------------------
+
+- Component-base Framework
+- Clean Seperation of template coding and application logic.
+- Built-in support for data-binding and dependency injection.
+- Supports responsive web design and modern frameworks.
+- Bootstrap, Google Material Design (Angular Material) and others.
+
+Key Terms
+----------
+
+Components : Main Player in an Angular Application, Has two parts:
+
+1. View of User Interface.
+2. Class that contains application logic/ event handling for the view.
+
+View Template : The user Interface for the component.
+Static HTML with dynamic elements.
+
+Directive : Adds custom behaviour to HTML elements.
+Used for looping , conditionals etc.
+
+Service : Helper Class that provides desired functionality.
+Retriving data from server , performing a calculation , validation etc.
+
+ Module: A collectioon of relaed components , directives , services etc.
