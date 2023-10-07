@@ -553,3 +553,81 @@ Service : Helper Class that provides desired functionality.
 Retriving data from server , performing a calculation , validation etc.
 
  Module: A collectioon of relaed components , directives , services etc.
+ 
+ Application UI Composition.
+ 
+ - Header Component.
+ - Main Content Component.
+ - Footer Component
+ - Product Categories Component.
+ - Product List Component.
+ - Page Navigation Component.
+ 
+ Application Interaction:
+ 
+ - Angular Project (Angular UI + Services written in typescript runs in the browser) -> Rest-Api - > Spring boot Backend -> Database.
+ 
+ Angular Project:
+ 
+ - An Angular Project is Composed of multiple files.
+ - HTML , CSS, TypeScript , Config and Images etc.
+ 
+ Creating an Angular Project
+ 
+ - Angular provides a command-line tool to generate a project.
+ - Generates the starter files to help you bootstrap your project.
+ 
+ Angular CLI
+ 
+ > npm install --location=global @angular/cli@14.0.7
+ 
+ > ng version //check version
+ > ng help
+ 
+ Creating New Projects with Angular CLI
+ 
+ > ng new <your-project-name>
+ > ng new my-first-angular-project
+ 
+ Running the Angular Application
+ 
+ cd <your-project-name>
+ cd my-first-angular-project
+ 
+ > ng serve
+ 
+ - This command builds the app(compile/transpile)
+ - Starts the Server
+ - Watches the source files
+ - Rebuilds the apps when source is updated(hot reload).
+ 
+ By default listens on port 4200
+ http://localhost:4200
+ 
+ > ng serve --open > Also opens a web browser to http://localhost:4200
+ 
+ Changing the Server Port
+ 
+ > ng serve --port 5100
+ > ng serve --port 5100 --open
+ 
+ Project Files
+ 
+ angular.json - Angular workspace configuration List of execution targets.
+ 
+ Node modules - local repo of node modules.
+ 
+ package.json - Project Meta data - List of node dependencies.
+ 
+ src - Main source directory
+	app - App components , template etc.
+	assets - images etc
+	envirnoments - Profiles for envirnoments: dev,test, prod etc.
+ index.html - Main Launch Page
+ polufills.ts - Add support or different browser versions.
+ 
+ test.ts - Unit test cases.
+ tsconfig.app.json, tsconfig.json, tsconfig.spec.json - have typescript conpiler configurations.
+ 
+ 
+ 
